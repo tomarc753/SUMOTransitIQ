@@ -3,13 +3,13 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <!-- Your compiled road network file -->
-        <net-file value="my_network.net.xml"/>
+        <!-- compiled road network file -->
+        <net-file value="mynet.net.xml"/>
         
-        <!-- Your traffic routes/demand file(s). Separate multiples with commas -->
-        <route-files value="my_routes.rou.xml"/>
+        <!-- traffic routes/demand file(s). separate with commas -->
+        <route-files value="myroutes.rou.xml"/>
         
-        <!-- Optional: Additional files like traffic lights, bus stops, or rerouters -->
+        <!-- Additional files like traffic lights, bus stops, or rerouters -->
         <!-- <additional-files value="additional.add.xml"/> -->
     </input>
 

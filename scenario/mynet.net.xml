@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-29T10:13:58.708299-05:00 by Eclipse SUMO netconvert 1.27.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="mynet.nod.xml"/>
+        <edge-files value="mynet.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="mynet.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,100.00,100.00" origBoundary="0.00,0.00,100.00,100.00" projParameter="!"/>
+
+    <edge id=":node1_0" function="internal">
+        <lane id=":node1_0_0" index="0" speed="3.90" length="2.58" shape="-1.60,0.00 -1.50,-0.70 -1.20,-1.20 -0.70,-1.50 0.00,-1.60"/>
+    </edge>
+    <edge id=":node2_0" function="internal">
+        <lane id=":node2_0_0" index="0" speed="3.90" length="2.58" shape="100.00,-1.60 100.70,-1.50 101.20,-1.20 101.50,-0.70 101.60,0.00"/>
+    </edge>
+    <edge id=":node3_0" function="internal">
+        <lane id=":node3_0_0" index="0" speed="3.90" length="2.58" shape="101.60,100.00 101.50,100.70 101.20,101.20 100.70,101.50 100.00,101.60"/>
+    </edge>
+    <edge id=":node4_0" function="internal">
+        <lane id=":node4_0_0" index="0" speed="3.90" length="2.58" shape="0.00,101.60 -0.70,101.50 -1.20,101.20 -1.50,100.70 -1.60,100.00"/>
+    </edge>
+
+    <edge id="edge1" from="node1" to="node2" priority="1">
+        <lane id="edge1_0" index="0" speed="30.00" length="100.00" shape="0.00,-1.60 100.00,-1.60"/>
+    </edge>
+    <edge id="edge2" from="node2" to="node3" priority="1">
+        <lane id="edge2_0" index="0" speed="30.00" length="100.00" shape="101.60,0.00 101.60,100.00"/>
+    </edge>
+    <edge id="edge3" from="node3" to="node4" priority="1">
+        <lane id="edge3_0" index="0" speed="30.00" length="100.00" shape="100.00,101.60 0.00,101.60"/>
+    </edge>
+    <edge id="edge4" from="node4" to="node1" priority="1">
+        <lane id="edge4_0" index="0" speed="30.00" length="100.00" shape="-1.60,100.00 -1.60,0.00"/>
+    </edge>
+
+    <junction id="node1" type="priority" x="0.00" y="0.00" incLanes="edge4_0" intLanes=":node1_0_0" shape="-3.20,0.00 0.00,0.00 0.00,-3.20 -1.78,-2.84 -2.40,-2.40 -2.84,-1.78 -3.11,-0.98">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="node2" type="priority" x="100.00" y="0.00" incLanes="edge1_0" intLanes=":node2_0_0" shape="100.00,0.00 103.20,0.00 102.84,-1.78 102.40,-2.40 101.78,-2.84 100.98,-3.11 100.00,-3.20">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="node3" type="priority" x="100.00" y="100.00" incLanes="edge2_0" intLanes=":node3_0_0" shape="103.20,100.00 100.00,100.00 100.00,103.20 101.78,102.84 102.40,102.40 102.84,101.78 103.11,100.98">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="node4" type="priority" x="0.00" y="100.00" incLanes="edge3_0" intLanes=":node4_0_0" shape="0.00,103.20 0.00,100.00 -3.20,100.00 -2.84,101.78 -2.40,102.40 -1.78,102.84 -0.98,103.11">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="edge1" to="edge2" fromLane="0" toLane="0" via=":node2_0_0" dir="l" state="M"/>
+    <connection from="edge2" to="edge3" fromLane="0" toLane="0" via=":node3_0_0" dir="l" state="M"/>
+    <connection from="edge3" to="edge4" fromLane="0" toLane="0" via=":node4_0_0" dir="l" state="M"/>
+    <connection from="edge4" to="edge1" fromLane="0" toLane="0" via=":node1_0_0" dir="l" state="M"/>
+
+    <connection from=":node1_0" to="edge1" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":node2_0" to="edge2" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":node3_0" to="edge3" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":node4_0" to="edge4" fromLane="0" toLane="0" dir="l" state="M"/>
+
+</net>
