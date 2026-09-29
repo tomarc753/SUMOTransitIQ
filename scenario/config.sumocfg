@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <!-- Your compiled road network file -->
+        <net-file value="my_network.net.xml"/>
+        
+        <!-- Your traffic routes/demand file(s). Separate multiples with commas -->
+        <route-files value="my_routes.rou.xml"/>
+        
+        <!-- Optional: Additional files like traffic lights, bus stops, or rerouters -->
+        <!-- <additional-files value="additional.add.xml"/> -->
+    </input>
+
+    <time>
+        <!-- Start time of the simulation in seconds -->
+        <begin value="0"/>
+        <!-- End time of the simulation in seconds -->
+        <end value="3600"/>
+        <!-- The step length of the simulation in seconds (Default is 1s) -->
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <!-- Prevents simulation crash/delay if a vehicle waits too long -->
+        <time-to-teleport value="-1"/> 
+    </processing>
+
+    <report>
+        <!-- Prints extra logging behavior to the terminal -->
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
